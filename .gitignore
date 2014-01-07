@@ -20,6 +20,5 @@
 *.out
 *.app
 *.sdf
-*.suo
 GUIEngine/Debug
 Debug/
