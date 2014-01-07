@@ -42,20 +42,10 @@ char* TextBoxTemplate::GetText()
 		}
 
 		txt = new char[len + 1];
-		((WORD*)txt)[0] = len + 1;
 		txt[len] = 0;
-
-		for (int i = 0; i < count; i++)
-		{
-			int currentLen = SendMessage(mhwnd, EM_LINELENGTH, SendMessage(mhwnd, EM_LINEINDEX, i, 0), 0);
-			SendMessage(mhwnd, EM_GETLINE, i, (LPARAM)txt);
-			txt[currentLen] = '\n';
-			txt += currentLen + 1;
-		}
-
-		txt -= len;
-		//((WORD*)txt)[0] = len + 1;
-		//SendMessage(mhwnd, EM_GETLINE, 0, (LPARAM)txt);
+		((WORD*)txt)[0] = len + 1;
+		SendMessage(mhwnd, EM_GETLINE, 0, (LPARAM)txt);
+		SendMessage(mhwnd,WM_GETTEXT,len + 1, (LPARAM)txt);
 		return txt;
 	}
 	return "";
