@@ -12,7 +12,7 @@ MainWindow::~MainWindow(void)
 
 void MainWindow::OnCreate()
 {
-	MessageBox(mhwnd, "Function called!","!!!", MB_OK | MB_ICONASTERISK);
+	textBox1 = new TextBoxTemplate(mhwnd, IDC_EDIT1);
 }
 LRESULT MainWindow::RealWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
@@ -23,6 +23,9 @@ LRESULT MainWindow::RealWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM l
 				MessageBox(mhwnd, "Button pressed!","!!!", MB_OK | MB_ICONASTERISK);
 			if (wParam == IDCANCEL)
 				exit(0);
+			if (wParam == IDC_BUTTON1)
+				//textBox1->AppendText("Hello World!");
+					MessageBox(mhwnd,textBox1->GetText(),"!!!", MB_OK);
 			break;
 	}
 	return WindowTemplate::RealWindowProc(hwnd,uMsg,wParam,lParam);

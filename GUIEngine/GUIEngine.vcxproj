@@ -76,13 +76,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonTemplate.cpp" />
+    <ClCompile Include="ControlTemplate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="TextBoxTemplate.cpp" />
     <ClCompile Include="WindowTemplate.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonTemplate.h" />
+    <ClInclude Include="ControlTemplate.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="TextBoxTemplate.h" />
     <ClInclude Include="WindowTemplate.h" />
   </ItemGroup>
   <ItemGroup>

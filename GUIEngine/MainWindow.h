@@ -1,5 +1,7 @@
 #pragma once
 #include "WindowTemplate.h"
+#include "TextBoxTemplate.h"
+#include "resource.h"
 
 class MainWindow : 
 	public WindowTemplate
@@ -9,5 +11,8 @@ public:
 	~MainWindow(void);
 	LRESULT RealWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 	void OnCreate();
+
+private:
+	TextBoxTemplate* textBox1;
 };
 
