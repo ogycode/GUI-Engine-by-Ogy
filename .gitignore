@@ -19,11 +19,6 @@
 *.exe
 *.out
 *.app
-*.pdb
-*.idb
-*.tlog
-*.log
-*.res
-*.lastbuildstate
-*.ilk
 *.sdf
+GUIEngine/Debug
+Debug/
