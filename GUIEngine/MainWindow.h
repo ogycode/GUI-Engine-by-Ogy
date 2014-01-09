@@ -3,6 +3,8 @@
 #include "TextBoxTemplate.h"
 #include "resource.h"
 
+using namespace GUIEngine;
+
 class MainWindow : 
 	public WindowTemplate
 {

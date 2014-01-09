@@ -1,6 +1,7 @@
 #include "MainWindow.h"
 #include "resource.h"
 
+using namespace GUIEngine;
 
 MainWindow::MainWindow(HINSTANCE hInstance, LPCSTR windowName, HWND parent) : WindowTemplate(hInstance, windowName, parent)
 {
@@ -18,15 +19,15 @@ LRESULT MainWindow::RealWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM l
 {
 	switch (uMsg)
 	{
-		case WM_COMMAND:
-			if (wParam == IDOK)
-				MessageBox(mhwnd, "Button pressed!","!!!", MB_OK | MB_ICONASTERISK);
-			if (wParam == IDCANCEL)
-				exit(0);
-			if (wParam == IDC_BUTTON1)
-				//textBox1->AppendText("Hello World!");
-					MessageBox(mhwnd,textBox1->GetText(),"!!!", MB_OK);
-			break;
+	case WM_COMMAND:
+		if (wParam == IDOK)
+			MessageBox(mhwnd, "Button pressed!","!!!", MB_OK | MB_ICONASTERISK);
+		if (wParam == IDCANCEL)
+			exit(0);
+		if (wParam == IDC_BUTTON1)
+			//textBox1->AppendText("Hello World!");
+				MessageBox(mhwnd,textBox1->GetText(),"!!!", MB_OK);
+		break;
 	}
 	return WindowTemplate::RealWindowProc(hwnd,uMsg,wParam,lParam);
 }

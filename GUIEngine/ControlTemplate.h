@@ -1,21 +1,24 @@
 #pragma once
 #include <Windows.h>
 
-class ControlTemplate
+namespace GUIEngine
 {
-public:
-	ControlTemplate(HWND parent, int id);
-	virtual ~ControlTemplate(void);
+	class ControlTemplate
+	{
+	public:
+		ControlTemplate(HWND parent, int id);
+		virtual ~ControlTemplate(void);
 
-	HWND GetHandle();
-	HWND GetParent();
-	int GetID();
-	RECT GetPosition();
-	void SetFont (HFONT font);
-	HFONT GetFont ();
-protected:
-	HWND mhwnd;
-	HWND mparent;
-	int mid;
-};
+		HWND GetHandle();
+		HWND GetParent();
+		int GetID();
+		RECT GetPosition();
+		void SetFont (HFONT font);
+		HFONT GetFont ();
+	protected:
+		HWND mhwnd;
+		HWND mparent;
+		int mid;
+	};
+}
 

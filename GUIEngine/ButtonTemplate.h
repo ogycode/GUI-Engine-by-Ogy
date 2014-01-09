@@ -3,12 +3,14 @@
 
 #include "ControlTemplate.h"
 
-
-class ButtonTemplate :
-	public ControlTemplate
+namespace GUIEngine
 {
-public:
-	ButtonTemplate(HWND parent, int id);
-	~ButtonTemplate(void);
-};
+	class ButtonTemplate :
+		public ControlTemplate
+	{
+	public:
+		ButtonTemplate(HWND parent, int id);
+		~ButtonTemplate(void);
+	};
+}
 

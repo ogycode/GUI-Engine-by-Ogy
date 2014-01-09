@@ -1,11 +1,13 @@
 #include "ButtonTemplate.h"
 
-
-ButtonTemplate::ButtonTemplate(HWND parent, int id) : ControlTemplate(parent, id)
+namespace GUIEngine
 {
-}
+	ButtonTemplate::ButtonTemplate(HWND parent, int id) : ControlTemplate(parent, id)
+	{
+	}
 
 
-ButtonTemplate::~ButtonTemplate(void)
-{
+	ButtonTemplate::~ButtonTemplate(void)
+	{
+	}
 }
