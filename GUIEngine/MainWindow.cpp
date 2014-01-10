@@ -1,5 +1,4 @@
 #include "MainWindow.h"
-#include "resource.h"
 
 using namespace GUIEngine;
 
@@ -43,21 +42,22 @@ LRESULT MainWindow::RealWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM l
 			case CBN_SELCHANGE:
 				{
 					int index = comboBox1->GetSelectedIndexItem();
-					//MessageBox(hwnd,comboBox1->GetSelectedItem(),"!!!", MB_OK);
 					switch (index)
 					{
 					case 0:
 						this->mbackground = CreateSolidBrush(0x00ff);
+						InvalidateRect(hwnd,NULL, true);
 						break;
 					case 1:
 						this->mbackground = CreateSolidBrush(0);
+						InvalidateRect(hwnd,NULL, true);
 						break;
 					case 2:
-						//this->mbackground = CreateSolidBrush(0);;
+						this->mbackground = CreatePatternBrush((HBITMAP)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDB_BITMAP1), IMAGE_BITMAP, 0, 0, 0));
+						InvalidateRect(hwnd,NULL, true);
 						break;
 					}
 				}
-				InvalidateRect(hwnd,NULL, true);
 			break;
 		}
 
