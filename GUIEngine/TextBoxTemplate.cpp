@@ -9,7 +9,10 @@ namespace GUIEngine
 	TextBoxTemplate::~TextBoxTemplate(void)
 	{
 		if (txt)
+		{
 			delete txt;
+			txt = NULL;
+		}
 	}
 
 	char* TextBoxTemplate::GetText()

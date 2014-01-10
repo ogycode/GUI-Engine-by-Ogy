@@ -19,6 +19,7 @@ namespace GUIEngine
 		virtual LRESULT RealWindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 		HWND mhwnd;
+		HBRUSH mbackground;
 	};
 }
 

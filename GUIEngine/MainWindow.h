@@ -1,6 +1,7 @@
 #pragma once
 #include "WindowTemplate.h"
 #include "TextBoxTemplate.h"
+#include "ComboBoxTemplate.h"
 #include "resource.h"
 
 using namespace GUIEngine;
@@ -16,5 +17,6 @@ public:
 
 private:
 	TextBoxTemplate* textBox1;
+	ComboBoxTemplate* comboBox1;
 };
 

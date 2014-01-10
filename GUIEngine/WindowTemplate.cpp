@@ -2,7 +2,7 @@
 
 namespace GUIEngine
 {
-	WindowTemplate::WindowTemplate(HINSTANCE hInstance, LPCSTR windowName, HWND parent)
+	WindowTemplate::WindowTemplate(HINSTANCE hInstance, LPCSTR windowName, HWND parent) : mbackground(NULL)
 	{
 		createWindow(hInstance,windowName,parent);
 	}
@@ -36,6 +36,11 @@ namespace GUIEngine
 		case WM_CLOSE:
 			EndDialog(hwnd, wParam);
 			PostQuitMessage(0);
+			break;
+		case WM_CTLCOLORDLG:
+			if (mbackground == NULL)
+				break;
+			return (LPARAM)mbackground;
 			break;
 		}
 		return 0;

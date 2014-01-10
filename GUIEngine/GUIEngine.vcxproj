@@ -77,6 +77,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ButtonTemplate.cpp" />
+    <ClCompile Include="ComboBoxTemplate.cpp" />
     <ClCompile Include="ControlTemplate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
@@ -85,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ButtonTemplate.h" />
+    <ClInclude Include="ComboBoxTemplate.h" />
     <ClInclude Include="ControlTemplate.h" />
     <ClInclude Include="MainWindow.h" />
     <ClInclude Include="resource.h" />
